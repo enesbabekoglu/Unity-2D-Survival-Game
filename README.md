@@ -14,5 +14,6 @@ Oyunumuz bir hayatta kalma oyunudur. Başlangıç olarak karakterimizin açlığ
 https://test.enesbabekoglu.com.tr
 
 ## Oyun İçi Görseller
+.
 
 
