@@ -10,6 +10,8 @@ public class PlayerState : MonoBehaviour
     public bool canChop = false;
     public bool canFire = false;
 
+    public Vector3 position;
+
     public bool isFlip = false;
 
     public uint woodCount = 0;
@@ -23,6 +25,8 @@ public class PlayerState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        position = transform.position;
+
         if(ItemOnHand == "Axe"){
             canChop = true;
         }else{

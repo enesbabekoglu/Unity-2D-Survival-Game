@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class takeDamage : MonoBehaviour
 {
 
@@ -12,7 +13,7 @@ public class takeDamage : MonoBehaviour
     public float hoverRadius = 1.0f;
     public PlayerState pState;
 
-
+    public float proximityRange;
     public TreeState treeState;
 
     
@@ -41,6 +42,22 @@ public class takeDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        
+        if(Vector3.Distance(transform.position, pState.position) < proximityRange){
+            playerNear = true;
+            text.color = availableColor;
+            if(treeState.health > 0.0f){
+                setUIVisibility(true);
+            }else{
+                setUIVisibility(false);
+            }
+        }else{
+            playerNear = false;
+            text.color = unavailableColor;
+            setUIVisibility(false);
+        }
+
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     
 
@@ -54,6 +71,8 @@ public class takeDamage : MonoBehaviour
         }else if(!playerNear){
             setUIVisibility(false);
 
+            mouseNear = false;
+        }else{
             mouseNear = false;
         }
     
@@ -81,28 +100,12 @@ public class takeDamage : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D collider){
-
-        if(collider.gameObject.CompareTag("player")){
-            playerNear = true;
-            text.color = availableColor;
-            if(treeState.health > 0.0f){
-                setUIVisibility(true);
-            }else{
-                setUIVisibility(false);
-            }
-
-        }
-        
+    
     }
 
     void OnTriggerExit2D(Collider2D collider){
 
-        if(collider.gameObject.CompareTag("player")){
-            playerNear = false;
-            text.color = unavailableColor;
-            setUIVisibility(false);
-            
-        }
+    
         
     }
 }
