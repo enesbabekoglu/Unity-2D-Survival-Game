@@ -30,3 +30,11 @@ https://test.enesbabekoglu.com.tr
 ![image](https://github.com/user-attachments/assets/73dd3ea3-23dc-404b-a07b-bb43a3533ff8)
 
 ![image](https://github.com/user-attachments/assets/bbca4d18-dca1-4c0c-b7f4-b385acb1e2f3)
+
+## Kaynaklar
+
+#### UI ve Oyun Objeleri
+https://assetstore.unity.com/packages/essentials/tutorial-projects/happy-harvest-2d-sample-project-259218
+
+#### Karakter
+https://www.artstation.com/marketplace/p/rnGJ/free-2d-demo-character-sprite-sheet
