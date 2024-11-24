@@ -1,16 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class damageOnCollision : MonoBehaviour
 {
     public float DPS;
 
     private bool isCollidingPlayer = false;
-
-    public static HungerHealthSystem Instance;
 
 
     // Start is called before the first frame update
@@ -24,31 +20,35 @@ public class damageOnCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (HungerHealthSystem.Instance == null)
+        {
+            Debug.LogError("HungerHealthSystem.Instance bulunamadı. Sağlık güncellemesi yapılamıyor.");
+            return;
+        }
 
-        if(isCollidingPlayer){
-            
-            Debug.Log($"Damage given: {DPS * Time.deltaTime}");
-            //HungerHealthSystem.Instance.UpdateHealth(DPS * Time.deltaTime);
-
+        if (isCollidingPlayer)
+        {
+            float damage = DPS * Time.deltaTime * -1; // Negatif değer sağlığı azaltır
+            Debug.Log($"Damage given: {damage}");
+            HungerHealthSystem.Instance.UpdateHealth(damage);
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collider){
-        if(collider.gameObject.CompareTag("player")){
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("player"))
+        {
             Debug.Log($"Collision with bush: {collider.gameObject.name}");
             isCollidingPlayer = true;
         }
     }
 
-
-    void OnTriggerExit2D(Collider2D collider){
-        if(collider.gameObject.CompareTag("player")){
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("player"))
+        {
             Debug.Log($"No more collision with bush: {collider.gameObject.name}");
             isCollidingPlayer = false;
-
         }
-        
-        
     }
 }
