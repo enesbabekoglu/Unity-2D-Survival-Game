@@ -2893,8 +2893,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0bac71d450d24ab7a81abca9900a455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HungerCount: {fileID: 0}
-  HealthCount: {fileID: 0}
+  HungerCount: {fileID: 1157359787}
+  HealthCount: {fileID: 1022439824}
 --- !u!1001 &607733825
 PrefabInstance:
   m_ObjectHideFlags: 0

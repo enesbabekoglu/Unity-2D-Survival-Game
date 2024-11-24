@@ -45,7 +45,7 @@ public class HungerHealthSystem : MonoBehaviour
         // Referansları kontrol et
         if (HungerCount == null || HealthCount == null)
         {
-            Debug.LogError("HungerCount veya HealthCount atanmadı! Lütfen UI öğelerini kontrol edin.");
+            Debug.LogError("HungerCount veya HealthCount atanmadı! Lütfen bileşenleri kontrol edin.");
             return;
         }
 
@@ -106,6 +106,11 @@ public class HungerHealthSystem : MonoBehaviour
         {
             float hunger = Mathf.Round(GameManager.Instance.Hunger * 100f) / 100f; // İki ondalık basamağa yuvarlama
             HungerCount.text = $"%{hunger:0.00}";
+            Debug.Log($"Hunger UI güncellendi: %{hunger:0.00}");
+        }
+        else
+        {
+            Debug.LogError("HungerCount null, UI güncellenemiyor.");
         }
 
         // Sağlık değerini güncelle
@@ -114,6 +119,11 @@ public class HungerHealthSystem : MonoBehaviour
             float health = GameManager.Instance.Health;
             float maxHealth = GameManager.Instance.MaxHealth;
             HealthCount.text = $"{health}/{maxHealth}";
+            Debug.Log($"Health UI güncellendi: {health}/{maxHealth}");
+        }
+        else
+        {
+            Debug.LogError("HealthCount null, UI güncellenemiyor.");
         }
     }
 }

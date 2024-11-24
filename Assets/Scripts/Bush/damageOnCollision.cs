@@ -8,7 +8,6 @@ public class damageOnCollision : MonoBehaviour
 
     private bool isCollidingPlayer = false;
 
-
     // Start is called before the first frame update
     void Start()
     {
