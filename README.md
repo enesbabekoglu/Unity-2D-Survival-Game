@@ -2,6 +2,12 @@
 
 Oyunumuz bir hayatta kalma oyunudur. Başlangıç olarak karakterimizin açlığının azalması, balık tutma (panelde mini oyun şeklinde), ağaç kesme, odunlar ile ateş yakma, ateşte balık pişirme, çalıların arasına girince canının azalması ve yavaşlaması, yemek yeme arayüzü (paneli) yapılmıştır.
 
+## Demo Bağlantısı
+https://test.enesbabekoglu.com.tr
+
+## Oynanış Videosu
+https://youtu.be/UOENMv4Hsss
+
 ## Proje Üyeleri
 ### 1. Ahmet Talha Geçgelen (22360859024) - [@gecgelenus](https://github.com/gecgelenus)
  - Çalıda iken yavaşlama damageOnCollision.cs:44 --  :55
@@ -16,6 +22,7 @@ Oyunumuz bir hayatta kalma oyunudur. Başlangıç olarak karakterimizin açlığ
  - Kameranın oyuncuyu takibi playerControls.cs:76
  - Ateşin yanma süresi kontrolü FireControl.cs:42
  - Ağaçın sağlık kontrolü/limiti takeDamage.cs:89
+
 ### 2. Enes Babekoğlu (20360859113) - [@enesbabekoglu](https://github.com/enesbabekoglu)
  - Balık pişirme BarbecueSystem.cs:37
  - Yiyecek yeme sistemi EatingSystem.cs:167
@@ -30,10 +37,6 @@ Oyunumuz bir hayatta kalma oyunudur. Başlangıç olarak karakterimizin açlığ
  - Mini oyun kullanıcı girdisi FishingSystem.cs:95 -- :101
  - Balık tutma süresi kontrolü FishingSystem.cs:132
  - Can ve açlık kontrolü/limiti HungerHealthSystem.cs:66 -- :81
-
-
-## Demo Bağlantısı
-https://test.enesbabekoglu.com.tr
 
 ## Oyun İçi Görseller
 
