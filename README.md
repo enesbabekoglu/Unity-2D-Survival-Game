@@ -3,12 +3,29 @@
 Oyunumuz bir hayatta kalma oyunudur. Başlangıç olarak karakterimizin açlığının azalması, balık tutma (panelde mini oyun şeklinde), ağaç kesme, odunlar ile ateş yakma, ateşte balık pişirme, çalıların arasına girince canının azalması ve yavaşlaması, yemek yeme arayüzü (paneli) yapılmıştır.
 
 ## Proje Üyeleri
-### 1. Ahmet Talha Geçgelen (20360859024) - [@gecgelenus](https://github.com/gecgelenus)
-  - deneme
-  - deneme
+### 1. Ahmet Talha Geçgelen (22360859024) - [@gecgelenus](https://github.com/gecgelenus)
+ - Çalıda iken yavaşlama damageOnCollision.cs:44 --  :55
+ - Çalıda iken hasar alma damageOnCollision.cs:36
+ - Ateş alanına yakınlık tespiti FireInteraction.cs:33
+ - Oyuncu çarpışma tespiti playerController.cs:32
+ - Oyuncu hareket kontrolü (+animasyon) playerController.cs:42
+ - Nesnenin oyuncuyu takibi followHolder.cs:56 -- :71
+ - Ağaç ile etkileşime geçme kontrolü takeDamage.cs:47 -- :64
+ - Ağaç ile etkileşim takeDamage.cs:87
+ - Ağacın yeniden doğması takeDamage.cs:38
+ - Kameranın oyuncuyu takibi playerControls.cs:76
 ### 2. Enes Babekoğlu (20360859113) - [@enesbabekoglu](https://github.com/enesbabekoglu)
-  - deneme
-  - deneme
+ - Balık pişirme BarbecueSystem.cs:37
+ - Yiyecek yeme sistemi EatingSystem.cs:167
+ - Balık tutma minioyunu FishingSystem.cs:55
+ - Balık tutma sistemi/Su ile etkileşim FishingTriggerHandler.cs:33
+ - Can ve açlık sistemi HungerHealthSystem.cs:60 -- :72 -- :85
+ - Envanter sistemi InventorySystem.cs:48 -- :69 -- :92 -- :103
+ - Oyun yönetim scripti GameManager.cs:50
+ - Nesnelerin etkileşime geçilebilirlik kontrolü followHolder.cs:112 -- :44
+ - Ateş alanına tıklayarak etkileşime geçme FireInteraction.cs:74
+ - Oyuncu hızının açlığa bağlı olarak değişimi playerState.cs:51
+
 
 ## Demo Bağlantısı
 https://test.enesbabekoglu.com.tr
