@@ -55,6 +55,9 @@ TagManager:
   - name: house
     uniqueID: 3927904345
     locked: 0
+  - name: bush
+    uniqueID: 437189241
+    locked: 0
   - name: player
     uniqueID: 2209114515
     locked: 0
