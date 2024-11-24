@@ -10,6 +10,8 @@ public class damageOnCollision : MonoBehaviour
 
     private bool isCollidingPlayer = false;
 
+    public static HungerHealthSystem Instance;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +27,9 @@ public class damageOnCollision : MonoBehaviour
         
 
         if(isCollidingPlayer){
+            
             Debug.Log($"Damage given: {DPS * Time.deltaTime}");
+            //HungerHealthSystem.Instance.UpdateHealth(DPS * Time.deltaTime);
 
         }
     }

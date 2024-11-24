@@ -8,9 +8,9 @@ public class GameManager : MonoBehaviour
 
     // PlayerData değişkenleri
     public float Hunger = 30f; // Açlık başlangıç değeri
-    public int Health = 100; // Sağlık başlangıç değeri
+    public float Health = 100f; // Sağlık başlangıç değeri
     public float MaxHunger = 100f;
-    public int MaxHealth = 100;
+    public float MaxHealth = 100f;
     public float MaxHungerMinutes = 180f; // Açlık süresi (dakika)
 
     // Singleton
@@ -55,7 +55,8 @@ public class GameManager : MonoBehaviour
 
             // Test için başlangıçta bazı ürünler ekleyelim
             inventorySystem.AddItem("Blackberry", 3);
-            
+            inventorySystem.AddItem("Wood", 5);
+
         }
     }
 }

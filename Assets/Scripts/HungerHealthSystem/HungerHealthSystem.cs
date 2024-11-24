@@ -66,6 +66,14 @@ public class HungerHealthSystem : MonoBehaviour
         }
     }
 
+    public void UpdateHealth(float HealthCount)
+    {
+
+        GameManager.Instance.Health += Mathf.Clamp(GameManager.Instance.Health - HealthCount, 0, GameManager.Instance.MaxHealth);
+        UpdateUI();
+
+    }
+
     private void UpdateUI()
     {
         if (GameManager.Instance == null)
@@ -84,8 +92,8 @@ public class HungerHealthSystem : MonoBehaviour
         // Sağlık değerini güncelle
         if (HealthCount != null)
         {
-            int health = GameManager.Instance.Health;
-            int maxHealth = GameManager.Instance.MaxHealth;
+            float health = GameManager.Instance.Health;
+            float maxHealth = GameManager.Instance.MaxHealth;
             HealthCount.text = $"{health}/{maxHealth}";
         }
     }

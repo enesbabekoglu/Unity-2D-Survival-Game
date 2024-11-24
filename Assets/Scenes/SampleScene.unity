@@ -421,15 +421,15 @@ PrefabInstance:
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: inventorySystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1319037911}
     - target: {fileID: 8575896944600729629, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -631,15 +631,15 @@ PrefabInstance:
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: inventorySystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1319037911}
     - target: {fileID: 8575896944600729629, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -874,7 +874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 603fd0233e618abf98161f834ea8e4b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pState: {fileID: 0}
+  pState: {fileID: 466446063}
   text: {fileID: 678759336}
   hoverRadius: 1
   proximityRange: 5
@@ -1412,15 +1412,15 @@ PrefabInstance:
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: inventorySystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1319037911}
     - target: {fileID: 8575896944600729629, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1920,15 +1920,15 @@ PrefabInstance:
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: inventorySystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1319037911}
     - target: {fileID: 8575896944600729629, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2512,7 +2512,7 @@ MonoBehaviour:
   ItemOnHand: 
   canChop: 0
   canFire: 0
-  inventorySystem: {fileID: 0}
+  inventorySystem: {fileID: 1319037911}
   position: {x: 0, y: 0, z: 0}
   isFlip: 0
   woodCount: 0
@@ -2595,15 +2595,15 @@ PrefabInstance:
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: inventorySystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1319037911}
     - target: {fileID: 8575896944600729629, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2815,6 +2815,10 @@ PrefabInstance:
       propertyPath: inventorySystem
       value: 
       objectReference: {fileID: 1319037911}
+    - target: {fileID: 8575896944600729629, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
+      propertyPath: pState
+      value: 
+      objectReference: {fileID: 466446063}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6681,15 +6685,15 @@ PrefabInstance:
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: inventorySystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1319037911}
     - target: {fileID: 8575896944600729629, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14070,15 +14074,15 @@ PrefabInstance:
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: inventorySystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1319037911}
     - target: {fileID: 8575896944600729629, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14443,15 +14447,15 @@ PrefabInstance:
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: inventorySystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1319037911}
     - target: {fileID: 8575896944600729629, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14669,15 +14673,15 @@ PrefabInstance:
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: inventorySystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1319037911}
     - target: {fileID: 8575896944600729629, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -88038,15 +88042,15 @@ PrefabInstance:
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: inventorySystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1319037911}
     - target: {fileID: 8575896944600729629, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -103904,15 +103908,15 @@ PrefabInstance:
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: inventorySystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1319037911}
     - target: {fileID: 8575896944600729629, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -107606,15 +107610,15 @@ PrefabInstance:
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: inventorySystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1319037911}
     - target: {fileID: 8575896944600729629, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -107807,15 +107811,15 @@ PrefabInstance:
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: inventorySystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1319037911}
     - target: {fileID: 8575896944600729629, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -107885,15 +107889,15 @@ PrefabInstance:
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: inventorySystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1319037911}
     - target: {fileID: 8575896944600729629, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -107963,15 +107967,15 @@ PrefabInstance:
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     - target: {fileID: 7034047446443940310, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: inventorySystem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1319037911}
     - target: {fileID: 8575896944600729629, guid: e4918c8f7620e52229ca93da2a6ca23c, type: 3}
       propertyPath: pState
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 466446063}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
