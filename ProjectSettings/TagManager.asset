@@ -8,6 +8,7 @@ TagManager:
   - Water
   - InvisibleWaterWall
   - WaterFishingArea
+  - Fire
   layers:
   - Default
   - TransparentFX

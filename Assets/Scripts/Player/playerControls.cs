@@ -5,7 +5,6 @@ using UnityEngine;
 public class playerController : MonoBehaviour
 {
 
-    public float speedCharacter = 10.0f;
     public float touchDistance = 1.0f;              // Ray length
     public LayerMask collisionLayer;
     public GameObject camera;
@@ -72,8 +71,8 @@ public class playerController : MonoBehaviour
         }
         
 
-        transform.Translate(new Vector3(horizontalMove * speedCharacter * Time.deltaTime, verticalMove * speedCharacter * Time.deltaTime, 0.0f));
-        camera.transform.Translate(new Vector3(horizontalMove * speedCharacter * Time.deltaTime, verticalMove * speedCharacter * Time.deltaTime, 0.0f));
+        transform.Translate(new Vector3(horizontalMove * pState.speedCharacter * Time.deltaTime, verticalMove * pState.speedCharacter * Time.deltaTime, 0.0f));
+        camera.transform.Translate(new Vector3(horizontalMove * pState.speedCharacter * Time.deltaTime, verticalMove * pState.speedCharacter * Time.deltaTime, 0.0f));
 
      
     }

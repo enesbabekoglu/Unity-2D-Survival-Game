@@ -3,25 +3,14 @@ using TMPro;
 
 public class HungerHealthSystem : MonoBehaviour
 {
-    public static HungerHealthSystem Instance; // Singleton
+
+    public PlayerState pState;
 
     public TextMeshProUGUI HungerCount; // Açlık UI
     public TextMeshProUGUI HealthCount; // Sağlık UI
 
     private float hungerDecreaseRate; // Saniyede azalan açlık
     private float hungerTimer;
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject); // Yeni bir örnek oluşturulmasını önler
-        }
-    }
 
     private void Start()
     {
@@ -106,6 +95,7 @@ public class HungerHealthSystem : MonoBehaviour
         {
             float hunger = Mathf.Round(GameManager.Instance.Hunger * 100f) / 100f; // İki ondalık basamağa yuvarlama
             HungerCount.text = $"%{hunger:0.00}";
+            pState.hunger = hunger;
             Debug.Log($"Hunger UI güncellendi: %{hunger:0.00}");
         }
         else
@@ -118,7 +108,8 @@ public class HungerHealthSystem : MonoBehaviour
         {
             float health = GameManager.Instance.Health;
             float maxHealth = GameManager.Instance.MaxHealth;
-            HealthCount.text = $"{health}/{maxHealth}";
+            HealthCount.text = $"{health:0}/{maxHealth:0}";
+            pState.health = health;
             Debug.Log($"Health UI güncellendi: {health}/{maxHealth}");
         }
         else

@@ -10,6 +10,13 @@ public class PlayerState : MonoBehaviour
     public bool canChop = false;
     public bool canFire = false;
 
+    public float baseSpeed = 5.0f;
+
+    public float speedCharacter = 10.0f;
+
+    public float hunger;
+    public float health;
+
     public InventorySystem inventorySystem;
 
     public Vector3 position;
@@ -40,5 +47,9 @@ public class PlayerState : MonoBehaviour
         }else{
             canFire = false;
         }
+
+        speedCharacter = baseSpeed + (baseSpeed*(hunger/100.0f));
+
+
     }
 }

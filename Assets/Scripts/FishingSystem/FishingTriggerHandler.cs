@@ -3,6 +3,8 @@ using System.Collections;
 
 public class FishingTriggerHandler : MonoBehaviour
 {
+
+    public Notification notification; // Notification script referansı
     public FishingSystem fishingSystem; // FishingSystem referansı
     private GameObject currentWaterZone; // Şu anda temas edilen su alanı
     public GameObject player; // Player GameObject referansı (PlayerState'e ulaşmak için)
@@ -59,7 +61,7 @@ public class FishingTriggerHandler : MonoBehaviour
                             }
                             else
                             {
-                                Debug.Log("Balık tutma işlemi zaten devam ediyor.");
+                                notification.ShowNotification("Balık tutma işlemi zaten devam ediyor.");
                             }
                         }
                         else
@@ -90,7 +92,6 @@ public class FishingTriggerHandler : MonoBehaviour
         if (collision.gameObject.CompareTag("Water")) // Su alanının Tag'i "Water"
         {
             currentWaterZone = collision.gameObject; // Su alanını kaydet
-            Debug.Log("Water alanına girdiniz.");
         }
     }
 
@@ -98,8 +99,7 @@ public class FishingTriggerHandler : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject == currentWaterZone)
-        {
-            Debug.Log("Water alanından çıktınız.");
+        {            
             currentWaterZone = null; // Su alanını sıfırla
         }
     }
@@ -108,7 +108,7 @@ public class FishingTriggerHandler : MonoBehaviour
     private IEnumerator StartFishingCoroutine()
     {
         isFishing = true;
-        Debug.Log("Balık tutma işlemi başladı. Bekleniyor...");
+        notification.ShowNotification("Balık tutma işlemi başladı. Bekleniyor...");
 
         // Olta sprite'ını değiştir
         if (playerSpriteRenderer != null)
@@ -120,12 +120,11 @@ public class FishingTriggerHandler : MonoBehaviour
 
         if (Random.value < 0.5f) // %50 ihtimalle balık ekranı açılır
         {
-            Debug.Log("Balık ekranı açılıyor!");
             fishingSystem.ShowFishingUI(); // Balık tutma UI'sini göster
         }
         else
         {
-            Debug.Log("Bu sefer balık yok!");
+            notification.ShowNotification("Bu sefer balık yok!");
         }
 
         // Sprite'ı eski haline döndür

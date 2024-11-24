@@ -3,6 +3,8 @@ using TMPro;
 
 public class FishingSystem : MonoBehaviour
 {
+
+    public Notification notification; // Notification script referansı
     public GameObject fishingUI; // FishingUI paneli.
     public RectTransform fishingBar; // FishingBar elementi.
     public RectTransform fishingBarFish; // FishingBarFish nesnesi.
@@ -145,7 +147,7 @@ public class FishingSystem : MonoBehaviour
         {
             if (inventorySystem != null)
             {
-                Debug.Log("Balığı tuttunuz!");
+                notification.ShowNotification("Balığı tuttunuz!");
                 inventorySystem.AddItem("Fish", 1); // Balığı envantere ekle.
             }
             else
@@ -155,7 +157,7 @@ public class FishingSystem : MonoBehaviour
         }
         else
         {
-            Debug.Log("Balık kaçtı!");
+            notification.ShowNotification("Balık kaçtı!");
         }
 
         HideFishingUI(); // Balık tutma UI'sini gizle.
@@ -178,7 +180,7 @@ public class FishingSystem : MonoBehaviour
     {
         if (isFishingActive)
         {
-            Debug.Log("Balık tutma iptal edildi.");
+            notification.ShowNotification("Balık tutma iptal edildi.");
         }
     }
 }
