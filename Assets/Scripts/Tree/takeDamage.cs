@@ -10,21 +10,22 @@ public class takeDamage : MonoBehaviour
 
     public TextMeshProUGUI text;
     public float hoverRadius = 1.0f;
+
+    public Animator animator;
+
     public PlayerState pState;
 
-
-    public TreeState treeState;
-
-    
-    
+    public Slider healthBar;
+    public float maxHealth = 100.0f;
 
     public float damagePerHit = 20.0f;
 
-    public int woodYield = 4;
+    
 
     public Color unavailableColor;
     public Color availableColor;
 
+    private float health;
 
     private bool playerNear = false;
     private bool mouseNear = false;
@@ -33,7 +34,10 @@ public class takeDamage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        health = maxHealth;
 
+        healthBar.maxValue = maxHealth;
+        healthBar.value = health;
         setUIVisibility(false);
 
     }
@@ -45,7 +49,7 @@ public class takeDamage : MonoBehaviour
     
 
         if(Math.Abs(mousePos.x - transform.position.x) < hoverRadius && Math.Abs(mousePos.y - transform.position.y) < hoverRadius){
-            if(treeState.health > 0.0f){
+            if(health > 0.0f){
                 setUIVisibility(true);
             }else{
                 setUIVisibility(false);
@@ -57,27 +61,26 @@ public class takeDamage : MonoBehaviour
             mouseNear = false;
         }
     
-        if(playerNear && mouseNear && Input.GetMouseButtonDown(0) && pState.canChop && treeState.isAlive){
+        if(playerNear && mouseNear && Input.GetMouseButtonDown(0) && pState.canChop){
             takeDmg();
         }
-    
 
 
     }
 
     void takeDmg(){
-        treeState.health -= damagePerHit;
-        treeState.health = Mathf.Clamp(treeState.health, 0, treeState.maxHealth); 
+        health -= damagePerHit;
+        health = Mathf.Clamp(health, 0, maxHealth); 
+        healthBar.value = health;
 
-        if(treeState.health == 0.0f){
-            treeState.isAlive = false;
-            treeState.inventorySystem.AddItem("Wood", woodYield);
+        if(health == 0.0f){
+            animator.SetBool("isAlive", false);
         }
     }
 
     void setUIVisibility(bool flag){
             text.gameObject.SetActive(flag);
-            treeState.healthBar.gameObject.SetActive(flag);
+            healthBar.gameObject.SetActive(flag);
     }
 
     void OnTriggerEnter2D(Collider2D collider){
@@ -85,7 +88,7 @@ public class takeDamage : MonoBehaviour
         if(collider.gameObject.CompareTag("player")){
             playerNear = true;
             text.color = availableColor;
-            if(treeState.health > 0.0f){
+            if(health > 0.0f){
                 setUIVisibility(true);
             }else{
                 setUIVisibility(false);
