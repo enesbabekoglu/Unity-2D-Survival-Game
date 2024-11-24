@@ -99,6 +99,17 @@ public class InventorySystem : MonoBehaviour
         return null;
     }
 
+    // Belirli bir ürünün miktarını döndür
+    public int GetItemCount(string itemName)
+    {
+        if (itemAmounts.ContainsKey(itemName))
+        {
+            return itemAmounts[itemName];
+        }
+        Debug.LogWarning($"Item '{itemName}' does not exist in the inventory!");
+        return 0; // Ürün bulunamazsa 0 döner
+    }
+
     // Tüm ürün adları ve miktarlarını döndür
     public Dictionary<string, int> GetInventory()
     {
