@@ -14,6 +14,8 @@ Oyunumuz bir hayatta kalma oyunudur. Başlangıç olarak karakterimizin açlığ
  - Ağaç ile etkileşim takeDamage.cs:87
  - Ağacın yeniden doğması takeDamage.cs:38
  - Kameranın oyuncuyu takibi playerControls.cs:76
+ - Ateşin yanma süresi kontrolü FireControl.cs:42
+ - Ağaçın sağlık kontrolü/limiti takeDamage.cs:89
 ### 2. Enes Babekoğlu (20360859113) - [@enesbabekoglu](https://github.com/enesbabekoglu)
  - Balık pişirme BarbecueSystem.cs:37
  - Yiyecek yeme sistemi EatingSystem.cs:167
@@ -25,6 +27,9 @@ Oyunumuz bir hayatta kalma oyunudur. Başlangıç olarak karakterimizin açlığ
  - Nesnelerin etkileşime geçilebilirlik kontrolü followHolder.cs:112 -- :44
  - Ateş alanına tıklayarak etkileşime geçme FireInteraction.cs:74
  - Oyuncu hızının açlığa bağlı olarak değişimi playerState.cs:51
+ - Mini oyun kullanıcı girdisi FishingSystem.cs:95 -- :101
+ - Balık tutma süresi kontrolü FishingSystem.cs:132
+ - Can ve açlık kontrolü/limiti HungerHealthSystem.cs:66 -- :81
 
 
 ## Demo Bağlantısı
