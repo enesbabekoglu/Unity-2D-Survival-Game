@@ -10,7 +10,7 @@ public class playerController : MonoBehaviour
     public LayerMask collisionLayer;
     public GameObject camera;
 
-
+    public PlayerState pState;
     public float radius = 5f;  // Detection radius
     public SpriteRenderer spriteRenderer;
 
@@ -38,7 +38,7 @@ public class playerController : MonoBehaviour
 
 
         float horizontalMove = 0.0f;
-        float verticalMove = 0.0f;
+        float verticalMove = 0.0f;  
 
         if(Input.GetKey(KeyCode.A) && !hitRight){
             horizontalMove -= 1.0f;
@@ -65,8 +65,10 @@ public class playerController : MonoBehaviour
 
         if(horizontalMove < 0){
             spriteRenderer.flipX = true;
+            pState.isFlip = true;
         }else if(horizontalMove > 0){
             spriteRenderer.flipX = false;
+            pState.isFlip = false;
         }
         
 

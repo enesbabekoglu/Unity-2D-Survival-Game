@@ -8,6 +8,8 @@ public class PlayerState : MonoBehaviour
     public bool canChop = false;
     public bool canFire = false;
 
+    public bool isFlip = false;
+
     // Start is called before the first frame update
     void Start()
     {

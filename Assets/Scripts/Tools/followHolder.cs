@@ -18,13 +18,13 @@ public class followHolder : MonoBehaviour
     public float Xoffset;
     public float Yoffset;
 
-
+    public bool isFlip = false;
     private bool playerNear = false;
     private bool followPlayer = false;
 
     private bool mouseNear = false;
 
-
+    public SpriteRenderer renderer;
 
 
     // Start is called before the first frame update
@@ -82,7 +82,20 @@ public class followHolder : MonoBehaviour
 
 
         if(followPlayer){
-            transform.transform.position = new Vector3(player.transform.position.x+Xoffset, player.transform.position.y+Yoffset, player.transform.position.z);
+            if(pState.isFlip){
+                transform.transform.position = new Vector3(player.transform.position.x-Xoffset, player.transform.position.y+Yoffset, player.transform.position.z);
+                if(!isFlip){
+                    renderer.flipX = true;
+                    isFlip = true;
+                }
+
+            }else{
+                transform.transform.position = new Vector3(player.transform.position.x+Xoffset, player.transform.position.y+Yoffset, player.transform.position.z);
+                if(isFlip){
+                    renderer.flipX = false;
+                    isFlip = false;
+                }
+            }
         }
 
 
