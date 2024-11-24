@@ -10,6 +10,8 @@ public class PlayerState : MonoBehaviour
     public bool canChop = false;
     public bool canFire = false;
 
+    public InventorySystem inventorySystem;
+
     public Vector3 position;
 
     public bool isFlip = false;
@@ -33,7 +35,7 @@ public class PlayerState : MonoBehaviour
             canChop = false;
         }
 
-        if(woodCount >= 3){
+        if(inventorySystem.GetItemCount("Wood") >= 3){
             canFire = true;
         }else{
             canFire = false;

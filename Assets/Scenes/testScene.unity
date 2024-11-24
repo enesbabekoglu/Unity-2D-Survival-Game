@@ -1927,6 +1927,7 @@ MonoBehaviour:
   ItemOnHand: 
   canChop: 0
   canFire: 0
+  inventorySystem: {fileID: 1319037911}
   position: {x: 0, y: 0, z: 0}
   isFlip: 0
   woodCount: 0
@@ -13366,15 +13367,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e6a2922b6c7b52f4b9da4357def5ac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 2078971727}
-  hoverRadius: 1
-  animator: {fileID: 1018051063}
-  pState: {fileID: 466446063}
-  healthBar: {fileID: 1860542368}
-  maxHealth: 100
-  damagePerHit: 20
+  fireControl: {fileID: 1018051067}
   unavailableColor: {r: 0.95467275, g: 0, b: 0, a: 1}
-  availableColor: {r: 0.050599545, g: 0.46791175, b: 0.98076355, a: 1}
+  availableColor: {r: 0.025279894, g: 0.6846256, b: 0.0415616, a: 1}
 --- !u!114 &1018051067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13387,7 +13382,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 603fd0233e618abf98161f834ea8e4b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  pState: {fileID: 466446063}
+  text: {fileID: 2078971727}
+  hoverRadius: 1
+  proximityRange: 5
+  playerNear: 0
+  animator: {fileID: 1018051063}
+  healthBar: {fileID: 1860542368}
+  maxHealth: 5
+  health: 0
+  isBurning: 0
 --- !u!61 &1018051068
 BoxCollider2D:
   m_ObjectHideFlags: 0
