@@ -1,14 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerState : MonoBehaviour
 {
-
+    public String ItemOnHand;
     public bool canChop = false;
     public bool canFire = false;
 
     public bool isFlip = false;
+
+    public uint woodCount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +23,16 @@ public class PlayerState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(ItemOnHand == "Axe"){
+            canChop = true;
+        }else{
+            canChop = false;
+        }
+
+        if(woodCount >= 3){
+            canFire = true;
+        }else{
+            canFire = false;
+        }
     }
 }
