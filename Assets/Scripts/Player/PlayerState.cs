@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class PlayerState : MonoBehaviour
 {
-    public InventoryUI inventoryUI;
+    public String ItemOnHand;
     public bool canChop = false;
     public bool canFire = false;
 

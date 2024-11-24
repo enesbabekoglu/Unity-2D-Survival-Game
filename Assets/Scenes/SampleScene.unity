@@ -3964,7 +3964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98719c96d4a2b4280b7eabe22bb0c62d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryUI: {fileID: 0}
+  ItemOnHand: 
   canChop: 0
   canFire: 0
   isFlip: 0
@@ -20484,6 +20484,7 @@ MonoBehaviour:
   hoverRadius: 1
   player: {fileID: 466446056}
   pState: {fileID: 466446063}
+  ItemType: 
   unavailableColor: {r: 0.9892394, g: 0.023404052, b: 0.023404052, a: 1}
   availableColor: {r: 0, g: 0.77542746, b: 0.09418154, a: 1}
   Xoffset: 0.75
@@ -101565,6 +101566,7 @@ MonoBehaviour:
   hoverRadius: 1
   player: {fileID: 466446056}
   pState: {fileID: 466446063}
+  ItemType: Axe
   unavailableColor: {r: 0.9892394, g: 0.023404052, b: 0.023404052, a: 1}
   availableColor: {r: 0, g: 0.77542746, b: 0.09418154, a: 1}
   Xoffset: 0.75

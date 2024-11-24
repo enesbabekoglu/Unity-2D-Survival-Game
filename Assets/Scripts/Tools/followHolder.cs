@@ -12,6 +12,8 @@ public class followHolder : MonoBehaviour
     public GameObject player;
     public PlayerState pState;
 
+    public String ItemType;
+
     public Color unavailableColor;
     public Color availableColor;
 
@@ -53,12 +55,15 @@ public class followHolder : MonoBehaviour
 
         if(playerNear && mouseNear && Input.GetMouseButtonDown(0) && !followPlayer){
             followPlayer = true;
+            pState.ItemOnHand = ItemType;
             pState.canChop = true;
             text.gameObject.SetActive(false);
 
         }else if(playerNear && mouseNear && Input.GetMouseButtonDown(1) && followPlayer){
             followPlayer = false;
             pState.canChop = false;
+            pState.ItemOnHand = "";
+
             text.gameObject.SetActive(true);
 
         }
