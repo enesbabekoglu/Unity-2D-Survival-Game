@@ -6,11 +6,13 @@ TagManager:
   tags:
   - player
   - Water
+  - InvisibleWaterWall
+  - WaterFishingArea
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - WaterFishingArea
   - Water
   - UI
   - wall
