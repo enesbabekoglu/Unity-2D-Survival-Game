@@ -9,6 +9,17 @@ TagManager:
   - InvisibleWaterWall
   - WaterFishingArea
   - Fire
+  - MasterVolumeSlider
+  - MusicVolumeSlider
+  - Bush
+  - Wood
+  - Stone
+  - Grass
+  - BackgroundMusic
+  - House
+  - Tree
+  - Barrel
+  - Scarecow
   layers:
   - Default
   - TransparentFX
@@ -21,7 +32,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Carpisabilirler
   - 
   - 
   - 

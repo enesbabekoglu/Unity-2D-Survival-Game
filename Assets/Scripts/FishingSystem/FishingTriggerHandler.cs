@@ -1,9 +1,10 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
 public class FishingTriggerHandler : MonoBehaviour
 {
-
     public Notification notification; // Notification script referansı
     public FishingSystem fishingSystem; // FishingSystem referansı
     private GameObject currentWaterZone; // Şu anda temas edilen su alanı
@@ -29,7 +30,13 @@ public class FishingTriggerHandler : MonoBehaviour
 
     void Update()
     {
-        // Eğer su alanında bulunuyorsa ve bir alana tıklanıyorsa kontrol yap
+        // Eğer mouse tıklaması UI üzerindeyse geri dön
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return; // UI'ya tıklanmışsa input işlemini iptal et
+        }
+
+        // Eğer su alanında bulunuyorsa ve mouse sol tuşuna basıldıysa
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("Mouse sol tuşuna tıklandı.");
@@ -86,25 +93,6 @@ public class FishingTriggerHandler : MonoBehaviour
         }
     }
 
-    // Su alanına girildiğinde
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Water")) // Su alanının Tag'i "Water"
-        {
-            currentWaterZone = collision.gameObject; // Su alanını kaydet
-        }
-    }
-
-    // Su alanından çıkıldığında
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject == currentWaterZone)
-        {            
-            currentWaterZone = null; // Su alanını sıfırla
-        }
-    }
-
-    // Coroutine: Her 5 saniyede bir %50 ihtimalle balık ekranını açar
     private IEnumerator StartFishingCoroutine()
     {
         isFishing = true;
@@ -134,5 +122,21 @@ public class FishingTriggerHandler : MonoBehaviour
         }
 
         isFishing = false; // Balık tutma işlemi tamamlandı
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Water")) // Su alanının Tag'i "Water"
+        {
+            currentWaterZone = collision.gameObject; // Su alanını kaydet
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject == currentWaterZone)
+        {
+            currentWaterZone = null; // Su alanını sıfırla
+        }
     }
 }

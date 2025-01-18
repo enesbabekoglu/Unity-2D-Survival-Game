@@ -1,140 +1,110 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; // TextMeshPro için eklenen namespace
+using TMPro; // TextMeshPro için namespace
 
 public class InventoryUI : MonoBehaviour
 {
-    public InventorySystem inventorySystem; // InventorySystem scriptine referans
-    public GameObject inventoryCanvasPrefab; // Envanter öğesinin canvas prefab'i
-    public Transform inventoryContent; // Envanter prefab'inin ekleneceği alan
+    public InventorySystem inventorySystem;         // InventorySystem scriptine referans
+    public GameObject inventoryItemPrefab;          // Tek bir envanter öğesi prefab'i
+    public Transform inventoryLayout;               // InventoryLayout referansı
 
     private Dictionary<string, GameObject> inventoryItems = new Dictionary<string, GameObject>();
 
     void Start()
     {
-        // InventorySystem event'ine abone ol
+        // Envanteri başlat ve event'e abone ol
         inventorySystem.InventoryChanged += UpdateInventoryUI;
+        InitializeInventoryUI();
     }
 
     public void InitializeInventoryUI()
     {
-        foreach (var item in inventorySystem.initialItems)
+        foreach (var item in inventorySystem.GetInventory())
         {
-            string itemName = item.Key; // Ürün adı
-            AddInventoryItemUI(itemName, inventorySystem.GetInventory()[itemName]);
+            AddInventoryItemUI(item.Key, item.Value);
         }
     }
 
     void AddInventoryItemUI(string itemName, int count)
     {
-        // Prefab'i oluştur ve parent'ına ekle
-        GameObject newCanvas = Instantiate(inventoryCanvasPrefab, inventoryContent);
-        newCanvas.name = $"{itemName}InventoryCanvas";
+        // Prefab'i oluştur ve parent'ına ekle (InventoryLayout)
+        GameObject newItem = Instantiate(inventoryItemPrefab, inventoryLayout);
+        newItem.name = $"{itemName}_Item";
 
-        // Canvas altındaki InventoryBox'u bul ve adlandır
-        Transform inventoryBox = newCanvas.transform.Find("InventoryBox");
-        if (inventoryBox != null)
+        // InventoryItemIcon'u bul ve sprite ekle
+        Transform itemIcon = newItem.transform.Find("InventoryItemIcon");
+        if (itemIcon != null)
         {
-            inventoryBox.name = $"{itemName}InventoryBox";
-
-            // InventoryBox altındaki InventoryImageBox'u bul ve adlandır
-            Transform imageBox = inventoryBox.Find("InventoryImageBox");
-            if (imageBox != null)
+            Image iconImage = itemIcon.GetComponent<Image>();
+            if (iconImage != null)
             {
-                imageBox.name = $"{itemName}InventoryImageBox";
-
-                // ImageBox altındaki ItemIcon'u bul ve sprite ekle
-                Transform itemIcon = imageBox.Find("InventoryItemIcon");
-                if (itemIcon != null)
+                string spriteName = inventorySystem.GetItemProperty(itemName, "Sprite");
+                if (!string.IsNullOrEmpty(spriteName))
                 {
-                    itemIcon.name = $"{itemName}InventoryItemIcon";
-                    Image itemIconImage = itemIcon.GetComponent<Image>();
-                    if (itemIconImage != null)
+                    Sprite loadedSprite = Resources.Load<Sprite>($"Objects/{spriteName}");
+                    if (loadedSprite != null)
                     {
-                        // InventorySystem'den Sprite bilgisini al
-                        string spriteName = inventorySystem.GetItemProperty(itemName, "Sprite");
-                        if (!string.IsNullOrEmpty(spriteName))
-                        {
-                            Sprite loadedSprite = Resources.Load<Sprite>($"Objects/{spriteName}");
-                            if (loadedSprite != null)
-                            {
-                                itemIconImage.sprite = loadedSprite;
-                            }
-                            else
-                            {
-                                Debug.LogWarning($"Sprite '{spriteName}' not found in Resources/Objects");
-                            }
-                        }
+                        iconImage.sprite = loadedSprite;
                     }
-                }
-            }
-
-            // InventoryBox altındaki InventoryItemCount'u bul ve adlandır
-            Transform itemCount = inventoryBox.Find("InventoryItemCount");
-            if (itemCount != null)
-            {
-                itemCount.name = $"{itemName}InventoryItemCount";
-                Text itemCountText = itemCount.GetComponent<Text>();
-                if (itemCountText != null)
-                {
-                    itemCountText.text = count.ToString(); // Ürün miktarını yaz
+                    else
+                    {
+                        Debug.LogWarning($"Sprite '{spriteName}' not found in Resources/Objects");
+                    }
                 }
             }
         }
 
-        // Envanterdeki objeleri takip için dictionary'e ekle
-        inventoryItems[itemName] = newCanvas;
+        // InventoryItemCount'u bul ve değerini güncelle
+        Transform itemCount = newItem.transform.Find("InventoryItemCount");
+        if (itemCount != null)
+        {
+            TextMeshProUGUI itemCountText = itemCount.GetComponent<TextMeshProUGUI>();
+            if (itemCountText != null)
+            {
+                itemCountText.text = count.ToString();
+            }
+        }
+
+        // Dictionary'e ekle
+        inventoryItems[itemName] = newItem;
     }
 
-public void UpdateItemCountUI(string itemName, int count)
-{
-    Debug.Log($"Updating UI for {itemName} with count: {count}");
-
-    if (inventoryItems.ContainsKey(itemName))
+    public void UpdateItemCountUI(string itemName, int count)
     {
-        GameObject existingCanvas = inventoryItems[itemName];
-        Transform inventoryBox = existingCanvas.transform.Find($"{itemName}InventoryBox");
-        if (inventoryBox != null)
+        if (inventoryItems.ContainsKey(itemName))
         {
-            Transform itemCount = inventoryBox.Find($"{itemName}InventoryItemCount");
+            GameObject existingItem = inventoryItems[itemName];
+
+            // InventoryItemCount'u bul ve değerini güncelle
+            Transform itemCount = existingItem.transform.Find("InventoryItemCount");
             if (itemCount != null)
             {
-                TextMeshProUGUI itemCountText = itemCount.GetComponent<TextMeshProUGUI>(); // Text yerine TextMeshProUGUI kullanıldı
+                TextMeshProUGUI itemCountText = itemCount.GetComponent<TextMeshProUGUI>();
                 if (itemCountText != null)
                 {
-                    itemCountText.text = count.ToString(); // Yeni miktarı güncelle
-                    Debug.Log($"UI updated for {itemName}: {count}");
+                    itemCountText.text = count.ToString();
                 }
-                else
-                {
-                    Debug.LogWarning($"TextMeshProUGUI component not found in {itemName}InventoryItemCount!");
-                }
-            }
-            else
-            {
-                Debug.LogWarning($"ItemCount transform not found for {itemName}!");
             }
         }
         else
         {
-            Debug.LogWarning($"InventoryBox transform not found for {itemName}!");
+            Debug.LogWarning($"Item '{itemName}' UI not found for updating!");
         }
     }
-    else
-    {
-        Debug.LogWarning($"Item '{itemName}' UI not found for updating!");
-    }
-}
 
     public void UpdateInventoryUI()
     {
-        foreach (KeyValuePair<string, int> item in inventorySystem.GetInventory())
+        // Envanteri güncelle
+        foreach (var item in inventorySystem.GetInventory())
         {
             if (inventoryItems.ContainsKey(item.Key))
             {
-                // Mevcut öğeyi güncelle
                 UpdateItemCountUI(item.Key, item.Value);
+            }
+            else
+            {
+                AddInventoryItemUI(item.Key, item.Value);
             }
         }
     }

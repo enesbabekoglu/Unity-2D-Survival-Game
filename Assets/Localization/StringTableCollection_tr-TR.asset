@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StringTableCollection_tr-TR
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: tr-TR
+  m_SharedData: {fileID: 11400000, guid: 6c701072534184fccb085e9ac6259d16, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 101727592448
+    m_Localized: "Ho\u015Fgeldiniz"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 610962235392
+    m_Localized: "Nas\u0131l Oynan\u0131r?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 800016293888
+    m_Localized: "Oyunu Ba\u015Flat"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6635220099072
+    m_Localized: "Duraklat\u0131ld\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6894948179968
+    m_Localized: Devam Et
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7035436392448
+    m_Localized: "Men\xFCye D\xF6n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 127631990185984
+    m_Localized: Eviniz
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
