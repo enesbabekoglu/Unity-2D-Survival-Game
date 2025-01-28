@@ -5,9 +5,6 @@ Oyunumuz bir hayatta kalma oyunudur. Başlangıç olarak karakterimizin açlığ
 ## Demo Bağlantısı
 https://test.enesbabekoglu.com.tr
 
-## Oynanış Videosu
-https://youtu.be/UOENMv4Hsss
-
 ## Proje Üyeleri / Görev Dağılımları
 ### 1. Ahmet Talha Geçgelen (22360859024) - [@gecgelenus](https://github.com/gecgelenus)
 
