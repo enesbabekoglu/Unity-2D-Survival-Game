@@ -12,6 +12,8 @@ public class PlayerState : MonoBehaviour
 
     public float baseSpeed = 5.0f;
 
+    public bool sneakSpeed = false;
+
     public float speedCharacter = 10.0f;
 
     public float hunger;

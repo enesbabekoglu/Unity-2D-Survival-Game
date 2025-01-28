@@ -48,6 +48,20 @@ public class playerController : MonoBehaviour
         RaycastHit2D hitLeft = Physics2D.Raycast(posTemp, Vector2.right, touchDistance, collisionLayer);
         RaycastHit2D hitRight = Physics2D.Raycast(posTemp, Vector2.left, touchDistance, collisionLayer);
 
+        if(Input.GetKey(KeyCode.LeftControl)){
+            animator.SetBool("sneaking", true);
+            if(!pState.sneakSpeed){
+                pState.baseSpeed /= 2.0f;
+                pState.sneakSpeed = true;
+            }
+        }else{
+            animator.SetBool("sneaking", false);
+            if(pState.sneakSpeed){
+                pState.baseSpeed *= 2.0f;
+                pState.sneakSpeed = false;
+            }
+        }
+
         float horizontalMove = 0.0f;
         float verticalMove = 0.0f;
 
