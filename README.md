@@ -69,27 +69,36 @@ https://test.enesbabekoglu.com.tr
 
 <img width="982" alt="image" src="https://github.com/user-attachments/assets/2c374022-aac0-4cef-abbd-048bb0a279d6" />
 
+
 <b>Balık Tutma: </b> Su kenarında elinde olta varken karakterimiz klavyenin sağ ve sol tuşları ile balık tutabilir.
+
 <img width="982" alt="image" src="https://github.com/user-attachments/assets/9957056b-214e-4817-9c73-1c60a134655b" />
 
+
 <b>Ateş Yakma ve Balık Tutma: </b> Su kenarında elinde olta varken karakterimiz klavyenin sağ ve sol tuşları ile balık tutabilir.
+
 <img width="982" alt="image" src="https://github.com/user-attachments/assets/83484b64-4dbb-4cfe-9d45-076a49183bcc" />
 
 
+<b>Yemek Yeme: </b> Tutulan ve pişirilen balıklar ile toplanan yumurtalar tüketilebilir.
 
-![image](https://github.com/user-attachments/assets/a579428c-9faf-4818-834e-ddca11e84567)
+<img width="982" alt="image" src="https://github.com/user-attachments/assets/f011ef96-bf4c-4967-9314-82db83f3350c" />
 
-![image](https://github.com/user-attachments/assets/e29e94d4-ba1d-4aaf-af8b-6d450775ec68)
 
-![image](https://github.com/user-attachments/assets/55b07362-a277-4416-87a5-c027c30dc457)
+<b>Ağaç Kesme: </b> Ağaçlar kesilebilir ve odun kazanılabilir. Odunlar ile ateş yakılır. Ağaç kesmek için balta elimizde olmalıdır.
 
-![image](https://github.com/user-attachments/assets/61de84b6-2fac-4e53-8672-fe82ccdca69a)
+<img width="982" alt="image" src="https://github.com/user-attachments/assets/4e21a5bd-12b0-411e-a44d-c7507401bfca" />
 
-![image](https://github.com/user-attachments/assets/0724258b-469f-44a6-84f7-e81a7793247d)
 
-![image](https://github.com/user-attachments/assets/73dd3ea3-23dc-404b-a07b-bb43a3533ff8)
+<b>Asenkron 2. Sahne</b>
 
-![image](https://github.com/user-attachments/assets/bbca4d18-dca1-4c0c-b7f4-b385acb1e2f3)
+<img width="982" alt="image" src="https://github.com/user-attachments/assets/35a1d2a7-bb58-4f44-ab61-d6a52783b897" />
+
+
+<b>Duraklama Menüsü</b>
+
+<img width="982" alt="image" src="https://github.com/user-attachments/assets/f4a60043-c582-4410-8429-feefc3a7c6e3" />
+
 
 ## Kaynaklar
 
