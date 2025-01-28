@@ -104,6 +104,17 @@ https://test.enesbabekoglu.com.tr
 
 #### UI ve Oyun Objeleri
 https://assetstore.unity.com/packages/essentials/tutorial-projects/happy-harvest-2d-sample-project-259218
+https://www.freepik.com/free-vector/organic-flat-element-animation-frames_13818850.htm#fromView=user&page=4&position=19
+https://www.freepik.com/premium-vector/cock-walk-cycle-animation-sequence-vector_19081201.htm#fromView=user&page=4&position=3
+https://www.freepik.com/free-photo/close-up-boiled-egg_945744.htm
+https://www.freepik.com/premium-vector/cock-walk-cycle-animation-sequence-vector_19081209.htm
+https://www.freepik.com/free-vector/square-wooden-frames-game-user-avatar_32491225.htm
+https://www.freepik.com/free-vector/vector-cartoon-game-icon-set-ui-interface-design_39985656.htm
 
 #### Karakter
 https://www.artstation.com/marketplace/p/rnGJ/free-2d-demo-character-sprite-sheet
+
+#### Sesler
+https://mixkit.co/free-sound-effects/walk/
+https://pixabay.com/sound-effects/
+
