@@ -46,6 +46,49 @@ MonoBehaviour:
     m_Localized: Eviniz
     m_Metadata:
       m_Items: []
+  - m_Id: 7271076026376192
+    m_Localized: "Ate\u015F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7271205307408384
+    m_Localized: "A\u011Fa\xE7"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7271378146287616
+    m_Localized: Olta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7271619159384064
+    m_Localized: Balta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7271774365409280
+    m_Localized: "Pi\u015Fiyor"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7294756911570944
+    m_Localized: "Bal\u0131k Tutun"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7294966870040576
+    m_Localized: Yemek Yiyin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7295280473956352
+    m_Localized: "Oltan\u0131za bir bal\u0131k tak\u0131ld\u0131! Bal\u0131\u011F\u0131
+      tutmak i\xE7in klavyenizin sa\u011F ve sol y\xF6n tu\u015Flar\u0131n\u0131
+      kullanarak s\xFCre sonuna kadar bal\u0131\u011F\u0131 ye\u015Fil alanda tutmaya
+      \xE7al\u0131\u015F\u0131n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7295573504811008
+    m_Localized: "Ac\u0131kt\u0131\u011F\u0131n\u0131zda karakteriniz daha yava\u015F
+      hareket eder bal\u0131k tutarak ve tuttu\u011Funuz bal\u0131klar\u0131 pi\u015Firerek
+      burada yiyebilirsiniz. Ayr\u0131ca b\xF6\u011F\xFCrtlen a\u011Fa\xE7lar\u0131ndan
+      b\xF6\u011F\xFCrtlen toplayabilir ve yine bu alandan yiyebilirsiniz.\n\nT\xFCketmek
+      istedi\u011Finiz yeme\u011Fin \xFCzerine t\u0131klaman\u0131z yeterlidir."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

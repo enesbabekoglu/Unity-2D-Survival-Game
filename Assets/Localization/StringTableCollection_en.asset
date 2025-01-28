@@ -46,6 +46,50 @@ MonoBehaviour:
     m_Localized: Your House
     m_Metadata:
       m_Items: []
+  - m_Id: 7271076026376192
+    m_Localized: Fire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7271205307408384
+    m_Localized: Tree
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7271378146287616
+    m_Localized: Fishing Rod
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7271619159384064
+    m_Localized: Axe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7271774365409280
+    m_Localized: It's Cooking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7294756911570944
+    m_Localized: Catch Fish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7294966870040576
+    m_Localized: Eat Food
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7295280473956352
+    m_Localized: A fish is caught on your hook! To catch the fish, use the right
+      and left arrow keys on your keyboard and try to keep the fish in the green
+      area until the time runs out.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7295573504811008
+    m_Localized: 'When you are hungry, your character moves slower. You can eat fish
+      here by fishing and cooking the fish you catch. You can also collect blackberries
+      from blackberry trees and eat them from this area.
+
+
+      Just click on the
+      food you want to consume.'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -57,7 +57,6 @@ public class GameManager : MonoBehaviour
             Debug.Log("GameManager initialized!");
 
             // Test için başlangıçta bazı ürünler ekleyelim
-            inventorySystem.AddItem("Blackberry", 3);
             inventorySystem.AddItem("Wood", 5);
 
         }

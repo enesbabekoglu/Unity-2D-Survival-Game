@@ -21,7 +21,7 @@ public class InventorySystem : MonoBehaviour
         {
             initialItems = new Dictionary<string, Dictionary<string, string>>()
             {
-                { "Blackberry", new Dictionary<string, string> { { "TextName", "Böğürtlen" } , { "Sprite", "Blackberry" } , { "Edible", "True" } , { "FoodBonus", "5" } } },
+                { "Egg", new Dictionary<string, string> { { "TextName", "Yumurta" } , { "Sprite", "egg" } , { "Edible", "True" } , { "FoodBonus", "5" } } },
                 { "Wood", new Dictionary<string, string> { { "TextName", "Odun" } , { "Sprite", "Wood_2" } , { "Edible", "False" } , { "FoodBonus", "0" } } },
                 { "Fish", new Dictionary<string, string> { { "TextName", "Balık" } , { "Sprite", "Fish" } , { "Edible", "False" } , { "FoodBonus", "0" } } },
                 { "Grilled_Fish", new Dictionary<string, string> { { "TextName", "Pişmiş Balık" } , { "Sprite", "Grilled_Fish" } , { "Edible", "True" } , { "FoodBonus", "10" } } },

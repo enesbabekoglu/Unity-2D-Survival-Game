@@ -43,6 +43,42 @@ MonoBehaviour:
     m_Key: key_your_house
     m_Metadata:
       m_Items: []
+  - m_Id: 7271076026376192
+    m_Key: key_Fire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7271205307408384
+    m_Key: key_Tree
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7271378146287616
+    m_Key: key_FishingRod
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7271619159384064
+    m_Key: key_Axe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7271774365409280
+    m_Key: key_Cooking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7294756911570944
+    m_Key: key_Fishing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7294966870040576
+    m_Key: key_Eating
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7295280473956352
+    m_Key: key_Fishing_Info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7295573504811008
+    m_Key: key_Eating_Info
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

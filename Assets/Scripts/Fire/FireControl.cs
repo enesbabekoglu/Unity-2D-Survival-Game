@@ -2,12 +2,11 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Audio;  // Audio Mixer için gerekli
+using UnityEngine.Audio;
 
 public class FireControl : MonoBehaviour
 {
     public PlayerState pState;
-
     public TextMeshProUGUI text;
     public float hoverRadius = 1.0f;
     public float proximityRange;
@@ -20,12 +19,11 @@ public class FireControl : MonoBehaviour
     public bool isBurning = false;
 
     // Ses kaynakları ve mixer
-    public AudioClip fireSizzleSound;  // Ateş sesi
-    public AudioClip cookingSizzleSound;  // Pişirme sesi
+    public AudioClip fireSizzleSound;
+    public AudioClip cookingSizzleSound;
     private AudioSource fireAudioSource;
     private AudioSource cookingAudioSource;
-
-    public AudioMixerGroup sfxMixerGroup;  // Merkezi ses kontrol için mixer group
+    public AudioMixerGroup sfxMixerGroup;
 
     public GameManager gameManager;
 
@@ -36,44 +34,41 @@ public class FireControl : MonoBehaviour
         healthBar.value = health;
         setUIVisibility(false);
 
-        // Ateş ses kaynağı
         fireAudioSource = gameObject.AddComponent<AudioSource>();
         fireAudioSource.clip = fireSizzleSound;
-        fireAudioSource.loop = true;  // Ateş sesi döngüde çalsın
-        fireAudioSource.spatialBlend = 1.0f;  // 3D ses efekti
-        fireAudioSource.minDistance = 2f;  // Tam ses duyulmaya başlanacak mesafe
-        fireAudioSource.maxDistance = 30f;  // Bu mesafeden sonra ses tamamen kaybolur
-        fireAudioSource.rolloffMode = AudioRolloffMode.Linear;  // Mesafeye göre doğrusal ses düşüşü
-        fireAudioSource.outputAudioMixerGroup = sfxMixerGroup;  // Mixer group bağlantısı
+        fireAudioSource.loop = true;
+        fireAudioSource.spatialBlend = 1.0f;
+        fireAudioSource.minDistance = 2f;
+        fireAudioSource.maxDistance = 30f;
+        fireAudioSource.rolloffMode = AudioRolloffMode.Linear;
+        fireAudioSource.outputAudioMixerGroup = sfxMixerGroup;
 
-        // Pişirme ses kaynağı
         cookingAudioSource = gameObject.AddComponent<AudioSource>();
         cookingAudioSource.clip = cookingSizzleSound;
-        cookingAudioSource.loop = true;  // Pişirme sesi döngüde çalsın
-        cookingAudioSource.spatialBlend = 1.0f;  // 3D ses efekti
-        cookingAudioSource.minDistance = 2f;  // Yakın mesafede tam ses
-        cookingAudioSource.maxDistance = 20f;  // Bu mesafeden sonra ses tamamen kaybolur
-        cookingAudioSource.rolloffMode = AudioRolloffMode.Linear;  // Doğrusal azalma
-        cookingAudioSource.outputAudioMixerGroup = sfxMixerGroup;  // Mixer group bağlantısı
-
+        cookingAudioSource.loop = true;
+        cookingAudioSource.spatialBlend = 1.0f;
+        cookingAudioSource.minDistance = 2f;
+        cookingAudioSource.maxDistance = 20f;
+        cookingAudioSource.rolloffMode = AudioRolloffMode.Linear;
+        cookingAudioSource.outputAudioMixerGroup = sfxMixerGroup;
 
         gameManager = GameObject.FindWithTag("gameManager").GetComponent<GameManager>();
         pState = GameObject.FindWithTag("player").GetComponent<PlayerState>();
-
-        
     }
 
     void Update()
     {
         if (gameManager.isBurning)
         {
-            if(!animator.GetBool("burning")){
+            if (!animator.GetBool("burning"))
+            {
                 animator.SetBool("burning", true);
             }
 
             gameManager.fireHealth -= Time.deltaTime;
             gameManager.fireHealth = Mathf.Clamp(gameManager.fireHealth, 0, maxHealth);
             healthBar.value = gameManager.fireHealth;
+
             if (gameManager.fireHealth == 0.0f)
             {
                 putOutFire();
@@ -83,26 +78,40 @@ public class FireControl : MonoBehaviour
 
     public void lightFire()
     {
-        pState.inventorySystem.RemoveItem("Wood", 3);
-        gameManager.fireHealth = maxHealth;
-        gameManager.isBurning = true;
-        animator.SetBool("burning", true);
-        fireAudioSource.Play();  // Ateş sesini başlat
+        // **Eğer ateş zaten yanıyorsa tekrar odun atılmasını engelle**
+        if (gameManager.isBurning)
+        {
+            Debug.Log("Ateş zaten yanıyor, tekrar odun eklenemez!");
+            return;
+        }
+
+        if (pState.inventorySystem.GetItemCount("Wood") >= 3)
+        {
+            pState.inventorySystem.RemoveItem("Wood", 3);
+            gameManager.fireHealth = maxHealth;
+            gameManager.isBurning = true;
+            animator.SetBool("burning", true);
+            fireAudioSource.Play();
+        }
+        else
+        {
+            Debug.Log("Yeterli odununuz yok!");
+        }
     }
 
     public void putOutFire()
     {
         gameManager.isBurning = false;
         animator.SetBool("burning", false);
-        fireAudioSource.Stop();  // Ateş sesi durdur
-        cookingAudioSource.Stop();  // Pişirme sesi durdur
+        fireAudioSource.Stop();
+        cookingAudioSource.Stop();
     }
 
     public void StartCookingSound()
     {
         if (!cookingAudioSource.isPlaying)
         {
-            cookingAudioSource.Play();  // Pişirme sesini başlat
+            cookingAudioSource.Play();
         }
     }
 
@@ -110,7 +119,7 @@ public class FireControl : MonoBehaviour
     {
         if (cookingAudioSource.isPlaying)
         {
-            cookingAudioSource.Stop();  // Pişirme sesini durdur
+            cookingAudioSource.Stop();
         }
     }
 

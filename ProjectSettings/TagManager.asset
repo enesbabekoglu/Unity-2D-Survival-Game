@@ -23,6 +23,7 @@ TagManager:
   - inventorySystem
   - gameManager
   - hungerHealthMenu
+  - Rug
   layers:
   - Default
   - TransparentFX

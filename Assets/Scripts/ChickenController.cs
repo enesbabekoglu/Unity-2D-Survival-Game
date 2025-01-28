@@ -23,6 +23,10 @@ public class ChickenController : MonoBehaviour
     public float secondarySoundDuration = 5f;
     public float fadeDuration = 1f;
 
+    public bool canLayEgg = true; // Tavuk yumurtlayabilir mi kontrolü
+    public float layEggInterval = 30f; // Yumurtlama aralığı (saniye)
+    public GameObject eggPrefab; // Yumurtanın prefabı
+
     private Vector2 targetPosition;
     private Animator animator;
     private bool isWaiting = false;
@@ -55,6 +59,11 @@ public class ChickenController : MonoBehaviour
 
         SetRandomTargetPosition();
         StartCoroutine(PlayChickenSounds());
+
+        if (canLayEgg)
+        {
+            StartCoroutine(LayEggRoutine());
+        }
     }
 
     void Update()
@@ -160,6 +169,12 @@ public class ChickenController : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(1f, 3f));
+
+            if (canLayEgg)
+            {
+                // Yumurta bırakabilen tavuğun ikinci sesi sadece yumurtlama sırasında çalınır
+                continue;
+            }
 
             AudioClip chosenClip = primarySound;
 
@@ -291,6 +306,30 @@ public class ChickenController : MonoBehaviour
             }
 
             SetRandomTargetPosition();
+        }
+    }
+
+    private IEnumerator LayEggRoutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(layEggInterval);
+
+            if (canLayEgg && Random.value <= 0.2f) // %20 ihtimalle yumurtla
+            {
+                if (eggPrefab != null)
+                {
+                    Instantiate(eggPrefab, transform.position, Quaternion.identity);
+                    Debug.Log("Tavuk yumurtladı!");
+
+                    // İkinci sesi yumurtlama sırasında çal
+                    StartCoroutine(PlaySoundWithFade(secondarySound, secondarySoundDuration));
+                }
+                else
+                {
+                    Debug.LogWarning("EggPrefab atanmamış! Yumurtlama gerçekleştirilemedi.");
+                }
+            }
         }
     }
 }

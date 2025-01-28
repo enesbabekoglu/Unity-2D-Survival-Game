@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 113762463834672432}
   - component: {fileID: 9116557725739691100}
   - component: {fileID: 3288509910120311985}
+  - component: {fileID: 5601504973225434473}
+  - component: {fileID: 5401739326472520716}
   m_Layer: 5
   m_Name: EatingPanelFoodBox
   m_TagString: Untagged
@@ -37,10 +39,10 @@ RectTransform:
   - {fileID: 8636514185437436382}
   m_Father: {fileID: 9219625696924230174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.1491, y: 8.3217}
-  m_SizeDelta: {x: 84.232, y: 87.2787}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 13.8682, y: -49.6766}
+  m_SizeDelta: {x: 99.6703, y: 103.26999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6012323780973628061
 CanvasRenderer:
@@ -70,7 +72,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 30c09c41123e94520912069476516fc3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb7392b4ff6f147589eedb0e4df8194b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -136,6 +138,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f931d4e5b3c634a60b3fc952c52327fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5601504973225434473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308327264668167433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c93384aef9c704f42b21e7d6b7fb43f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleFactor: 0.95
+  transitionDuration: 0.1
+--- !u!114 &5401739326472520716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308327264668167433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f931d4e5b3c634a60b3fc952c52327fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1206199382940388997
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,10 +196,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 3088769846343111781}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.0923e-11, y: -52.1}
-  m_SizeDelta: {x: 74.787, y: 15.7684}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0.00010157, y: -11.965002}
+  m_SizeDelta: {x: 99.67, y: 15.768398}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4820711873474966551
 CanvasRenderer:
@@ -210,8 +238,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279582612
-  m_fontColor: {r: 0.5803922, g: 0.24705882, b: 0.08235294, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -228,8 +256,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 9
-  m_fontSizeBase: 9
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -264,7 +292,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -0.49433136, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -304,8 +332,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -6.5}
-  m_SizeDelta: {x: 57.4888, y: 57.4891}
+  m_AnchoredPosition: {x: 0.000088692, y: -4.8}
+  m_SizeDelta: {x: 60.983, y: 60.9836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7062272433546786906
 CanvasRenderer:
@@ -361,6 +389,8 @@ GameObject:
   - component: {fileID: 8209541914916460170}
   - component: {fileID: 171122469759460134}
   - component: {fileID: 8006552927518042345}
+  - component: {fileID: 8061140806271504719}
+  - component: {fileID: 880925612521074960}
   m_Layer: 5
   m_Name: EatingPanelFoodBoxCanvas
   m_TagString: Untagged
@@ -433,7 +463,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &2871752049729960427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,6 +592,32 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &8061140806271504719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4975382925061184437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c93384aef9c704f42b21e7d6b7fb43f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleFactor: 0.95
+  transitionDuration: 0.1
+--- !u!114 &880925612521074960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4975382925061184437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f931d4e5b3c634a60b3fc952c52327fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6692642625396042988
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,10 +650,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 3088769846343111781}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1134, y: 27.5214}
-  m_SizeDelta: {x: 67.1174, y: 12.657}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.000093073, y: -15.634998}
+  m_SizeDelta: {x: 67.1174, y: 12.6570015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5794778852590231367
 CanvasRenderer:
@@ -636,8 +692,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278462571
-  m_fontColor: {r: 0.41960785, g: 0.15686275, b: 0.015686275, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -654,8 +710,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

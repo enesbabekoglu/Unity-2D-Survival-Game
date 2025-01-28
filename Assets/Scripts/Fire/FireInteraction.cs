@@ -8,40 +8,29 @@ using UnityEngine.UI;
 public class FireInteraction : MonoBehaviour
 {
     public FireControl fireControl;
-
     public Color unavailableColor;
     public Color availableColor;
 
     private bool mouseNear = false;
+    private Collider2D fireCollider;
 
-    private Collider2D fireCollider; // Ateşin Collider referansı
-
-    // Start is called before the first frame update
     void Start()
     {
-        fireCollider = GetComponent<Collider2D>(); // Ateş objesindeki Collider2D bileşeni
+        fireCollider = GetComponent<Collider2D>();
         if (fireCollider == null)
         {
             Debug.LogError("Collider2D bulunamadı! FireInteraction doğru bir objeye eklenmemiş.");
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Oyuncu yakınlık kontrolü
+        // Oyuncu yakın mı?
         if (Vector3.Distance(transform.position, fireControl.pState.position) < fireControl.proximityRange)
         {
             fireControl.playerNear = true;
             fireControl.text.color = availableColor;
-            if (fireControl.health > 0.0f)
-            {
-                fireControl.setUIVisibility(true);
-            }
-            else
-            {
-                fireControl.setUIVisibility(false);
-            }
+            fireControl.setUIVisibility(fireControl.health > 0.0f);
         }
         else
         {
@@ -50,18 +39,11 @@ public class FireInteraction : MonoBehaviour
             fireControl.setUIVisibility(false);
         }
 
-        // Fare konumunun Fire Collider içinde olup olmadığını kontrol et
+        // Fare ateşin üstünde mi?
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (fireCollider != null && fireCollider.OverlapPoint(mousePos))
         {
-            if (fireControl.health > 0.0f)
-            {
-                fireControl.setUIVisibility(true);
-            }
-            else
-            {
-                fireControl.setUIVisibility(false);
-            }
+            fireControl.setUIVisibility(fireControl.health > 0.0f);
             mouseNear = true;
         }
         else if (!fireControl.playerNear)
@@ -70,21 +52,17 @@ public class FireInteraction : MonoBehaviour
             mouseNear = false;
         }
 
-        // Ateşi yakma işlemi (sadece fare collider içine tıklarsa)
-        if (fireControl.playerNear && mouseNear && Input.GetMouseButtonDown(0) && fireControl.pState.canFire && !fireControl.isBurning)
+        // **Ateşi yakma işlemi (sadece eğer yanmıyorsa çalışır)**
+        if (fireControl.playerNear && mouseNear && Input.GetMouseButtonDown(0) && fireControl.pState.canFire)
         {
-            fireControl.lightFire();
+            if (!fireControl.isBurning) 
+            {
+                fireControl.lightFire();
+            }
+            else
+            {
+                Debug.Log("Ateş zaten yanıyor, tekrar odun eklenemez!");
+            }
         }
-    }
-
-    // İsteğe bağlı olarak diğer tetikleyiciler
-    void OnTriggerEnter2D(Collider2D collider)
-    {
-        // Oyuncu Fire Collider içine girdiğinde başka bir tetikleme gerekiyorsa buraya ekleyebilirsiniz
-    }
-
-    void OnTriggerExit2D(Collider2D collider)
-    {
-        // Oyuncu Fire Collider'dan çıktığında işlem gerekiyorsa buraya ekleyebilirsiniz
     }
 }

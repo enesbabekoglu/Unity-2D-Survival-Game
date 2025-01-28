@@ -22,8 +22,8 @@ public class playerController : MonoBehaviour
     public AudioClip grassFootstepSound;
     public AudioClip woodFootstepSound;
     public AudioClip stoneFootstepSound;
-    public AudioClip waterFootstepSound;
     public AudioClip bushFootstepSound;
+    public AudioClip rugFootstepSound;
     public AudioClip damageSound;  // Hasar sesi
     public AudioMixerGroup sfxMixerGroup;  // Merkezi ses kontrol için mixer group
 
@@ -126,11 +126,12 @@ public class playerController : MonoBehaviour
                 case "Stone":
                     footstepAudioSource.clip = stoneFootstepSound;
                     break;
-                case "Water":
-                    footstepAudioSource.clip = waterFootstepSound;
                     break;
                 case "Bush":
                     footstepAudioSource.clip = bushFootstepSound;
+                    break;
+                case "Rug":
+                    footstepAudioSource.clip = rugFootstepSound;
                     break;
             }
 
@@ -165,13 +166,13 @@ public class playerController : MonoBehaviour
         {
             currentSurface = "Stone";
         }
-        else if (other.CompareTag("Water"))
-        {
-            currentSurface = "Water";
-        }
         else if (other.CompareTag("Bush"))
         {
             currentSurface = "Bush";
+        }
+        else if (other.CompareTag("Rug"))
+        {
+            currentSurface = "Rug";
         }
     }
 
@@ -185,9 +186,14 @@ public class playerController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Bush") || other.CompareTag("Water") || other.CompareTag("Wood") || other.CompareTag("Stone"))
+        if (other.CompareTag("Bush") || other.CompareTag("Wood") || other.CompareTag("Stone"))
         {
             currentSurface = "Grass";  // Yüzeyden çıkınca varsayılan yüzeye geç
+
+        }else if(other.CompareTag("Rug")){
+
+            currentSurface = "Wood";
+
         }
     }
 }

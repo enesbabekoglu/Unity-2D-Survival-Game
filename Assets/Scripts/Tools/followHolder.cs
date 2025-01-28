@@ -62,9 +62,8 @@ public class followHolder : MonoBehaviour
 
         }else if(playerNear && mouseNear && Input.GetMouseButtonDown(1) && followPlayer){
             followPlayer = false;
+            pState.ItemOnHand = null;
             pState.canChop = false;
-            pState.ItemOnHand = "";
-
             text.gameObject.SetActive(true);
 
         }
@@ -72,7 +71,6 @@ public class followHolder : MonoBehaviour
         if(playerNear && Input.GetKeyDown(KeyCode.P) && !followPlayer){
             followPlayer = true;
             pState.canChop = true;
-
             text.gameObject.SetActive(false);
 
         }else if(playerNear && Input.GetKeyDown(KeyCode.P) && followPlayer){
@@ -81,11 +79,6 @@ public class followHolder : MonoBehaviour
             text.gameObject.SetActive(true);
 
         }
-
-        
-
-
-
 
         if(followPlayer){
             if(pState.isFlip){
