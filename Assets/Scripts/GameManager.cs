@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     public float MaxHealth = 100f;
     public float MaxHungerMinutes = 180f; // Açlık süresi (dakika)
 
+    public float fireHealth = 0.0f;
+    public bool isBurning = false;
+
     // Singleton
     public static GameManager Instance;
 

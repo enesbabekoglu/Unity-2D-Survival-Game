@@ -27,6 +27,8 @@ public class FireControl : MonoBehaviour
 
     public AudioMixerGroup sfxMixerGroup;  // Merkezi ses kontrol için mixer group
 
+    public GameManager gameManager;
+
     void Start()
     {
         health = maxHealth;
@@ -53,16 +55,26 @@ public class FireControl : MonoBehaviour
         cookingAudioSource.maxDistance = 20f;  // Bu mesafeden sonra ses tamamen kaybolur
         cookingAudioSource.rolloffMode = AudioRolloffMode.Linear;  // Doğrusal azalma
         cookingAudioSource.outputAudioMixerGroup = sfxMixerGroup;  // Mixer group bağlantısı
+
+
+        gameManager = GameObject.FindWithTag("gameManager").GetComponent<GameManager>();
+        pState = GameObject.FindWithTag("player").GetComponent<PlayerState>();
+
+        
     }
 
     void Update()
     {
-        if (isBurning)
+        if (gameManager.isBurning)
         {
-            health -= Time.deltaTime;
-            health = Mathf.Clamp(health, 0, maxHealth);
-            healthBar.value = health;
-            if (health == 0.0f)
+            if(!animator.GetBool("burning")){
+                animator.SetBool("burning", true);
+            }
+
+            gameManager.fireHealth -= Time.deltaTime;
+            gameManager.fireHealth = Mathf.Clamp(gameManager.fireHealth, 0, maxHealth);
+            healthBar.value = gameManager.fireHealth;
+            if (gameManager.fireHealth == 0.0f)
             {
                 putOutFire();
             }
@@ -72,15 +84,15 @@ public class FireControl : MonoBehaviour
     public void lightFire()
     {
         pState.inventorySystem.RemoveItem("Wood", 3);
-        health = maxHealth;
-        isBurning = true;
+        gameManager.fireHealth = maxHealth;
+        gameManager.isBurning = true;
         animator.SetBool("burning", true);
         fireAudioSource.Play();  // Ateş sesini başlat
     }
 
     public void putOutFire()
     {
-        isBurning = false;
+        gameManager.isBurning = false;
         animator.SetBool("burning", false);
         fireAudioSource.Stop();  // Ateş sesi durdur
         cookingAudioSource.Stop();  // Pişirme sesi durdur

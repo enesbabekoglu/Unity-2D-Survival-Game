@@ -56,6 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Unity-2D-Survival-Game.sln",
+    "dotnet.defaultSolution": "Unity-2D-Survival-Game-main.sln",
     "FSharp.suggestGitignore": false
 }

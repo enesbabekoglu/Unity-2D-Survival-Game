@@ -32,7 +32,8 @@ public class followHolder : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindWithTag("player");
+        pState = player.GetComponent<PlayerState>();
     }
 
     // Update is called once per frame

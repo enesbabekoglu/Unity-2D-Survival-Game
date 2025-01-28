@@ -22,6 +22,12 @@ public class TreeState : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        GameObject player = GameObject.FindWithTag("player");
+        pState = player.GetComponent<PlayerState>();
+
+        inventorySystem = GameObject.FindWithTag("inventorySystem").GetComponent<InventorySystem>();
+
         health = maxHealth;
 
         healthBar.maxValue = maxHealth;

@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -157,6 +159,14 @@ public class playerController : MonoBehaviour
         {
             currentSurface = "Bush";
         }
+    }
+
+    public void teleportPlayer(Vector3 pos){
+        transform.transform.position = pos;
+        Vector3 tempVec = pos;
+        tempVec.z = camera.transform.position.z; 
+        camera.transform.position = tempVec;
+
     }
 
     private void OnTriggerExit2D(Collider2D other)

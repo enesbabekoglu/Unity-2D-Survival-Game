@@ -46,6 +46,12 @@ public class damageOnCollision : MonoBehaviour
 
         // Oyunun başında tam sayı can değerini kaydediyoruz
         previousHealth = Mathf.FloorToInt(GameManager.Instance.Health);
+        
+        GameObject player = GameObject.FindWithTag("player");
+        pState = player.GetComponent<PlayerState>();
+        damageTextParent = player.transform;
+        Instance = GameObject.FindWithTag("hungerHealthMenu").GetComponent<HungerHealthSystem>();
+
     }
 
     void Update()

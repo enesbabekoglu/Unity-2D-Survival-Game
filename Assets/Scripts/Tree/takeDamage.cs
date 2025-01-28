@@ -36,7 +36,8 @@ public class takeDamage : MonoBehaviour
     {
 
         setUIVisibility(false);
-
+        GameObject player = GameObject.FindWithTag("player");
+        pState = player.GetComponent<PlayerState>();
     }
 
     // Update is called once per frame
@@ -91,6 +92,8 @@ public class takeDamage : MonoBehaviour
         if(treeState.health == 0.0f){
             treeState.isAlive = false;
             treeState.inventorySystem.AddItem("Wood", woodYield);
+        }else{
+            treeState.animator.SetTrigger("damaged");
         }
     }
 

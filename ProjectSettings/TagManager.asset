@@ -20,6 +20,9 @@ TagManager:
   - Tree
   - Barrel
   - Scarecow
+  - inventorySystem
+  - gameManager
+  - hungerHealthMenu
   layers:
   - Default
   - TransparentFX

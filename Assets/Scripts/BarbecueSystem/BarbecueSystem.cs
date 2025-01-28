@@ -21,6 +21,7 @@ public class BarbecueSystem : MonoBehaviour
         {
             Debug.LogError("FireControl bulunamadı. Ateş kontrolüne erişim başarısız!");
         }
+        pState = GameObject.FindWithTag("player").GetComponent<PlayerState>();
     }
 
     void Update()

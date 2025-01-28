@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HowCanPlayScene.unity
     guid: 08abc79687b20456f9a64cbc41f4169d
+  - enabled: 1
+    path: Assets/Scenes/barnScene.unity
+    guid: 3a328ab2c112ab7438c6e3a80b2d2ef7
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 00417faa743a847bdacf65c41ae48e15, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: d3298bc3f5bd649f4ad79eb56b0d16a1, type: 2}
