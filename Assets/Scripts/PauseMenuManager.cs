@@ -20,7 +20,7 @@ public class PauseMenuManager : MonoBehaviour
 
         // Butonlara event ekleme
         continueButton.onClick.AddListener(ResumeGame);
-        backButton.onClick.AddListener(GoToMainMenu);
+        backButton.onClick.AddListener(ReturnToMenu);
         closeButton.onClick.AddListener(ResumeGame); // Çarpı da devam işlevi görsün
     }
 
@@ -56,9 +56,21 @@ public class PauseMenuManager : MonoBehaviour
         isGamePaused = false;
     }
 
-    public void GoToMainMenu()
+    public void ReturnToMenu()
     {
         Time.timeScale = 1f; // Oyunu normale döndür
+        
+        // Sahnedeki tüm GameObject'leri bul
+        GameObject[] allObjects = FindObjectsOfType<GameObject>();
+
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.name != "BackgroundMusic" && obj.name != "EventSystem"  && obj.name != "MainCamera")
+            {
+                Destroy(obj); // Sadece müzik ve event sistemi dışındaki her şeyi yok et
+            }
+        }
+        
         SceneManager.LoadScene("MainScene"); // Ana menü sahnesini yükle
     }
 }
