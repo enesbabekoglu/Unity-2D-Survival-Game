@@ -2,6 +2,14 @@
 
 Oyunumuz bir hayatta kalma oyunudur. Başlangıç olarak karakterimizin açlığının azalması, balık tutma (panelde mini oyun şeklinde), ağaç kesme, odunlar ile ateş yakma, ateşte balık pişirme, çalıların arasına girince canının azalması ve yavaşlaması, yemek yeme arayüzü (paneli) yapılmıştır.
 
+## NASIL OYNANIR?
+Karakterimiz yürürken sol CTRL tuşuna basılı tutarak karakterimizin eğilmesini sağlayabiliriz.
+WASD tuşları ile hareket edilir.
+Balık tutma ekranında sağ ve sol tuşlar ile balık tutulur.
+Odun kesmek için elimize sol tık ile balta almalıyız. Sağ tık ile baltayı bırakabiliriz. (Aynısı olta içinde geçerlidir.)
+Tavuklara tıklandığında zıplayarak korkup kaçarlar. Tavuklara temas ettiğimizde zıplamadan korkup kaçarlar. Tavuklar yanan ateşe (sönmüş ateşte korkmazlar), dikenlere temas ettiğinde korkup kaçarlar. Tavuklar belirli aralıklarla yumurtlarla ve yumurtlarken farklı bir ses çıkartırlar.
+
+
 ## Demo Bağlantısı
 https://test.enesbabekoglu.com.tr
 
