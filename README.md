@@ -56,9 +56,29 @@ https://youtu.be/UOENMv4Hsss
   - Ses ve Müzik (10x)
 
 
-## Oyun İçi Görseller
+## Oyun İçi Özellikler ve Görseller
 
-![image](https://github.com/user-attachments/assets/aab182a4-8a4d-4380-b6a0-b539153e0d38)
+<b>Ana Menü: </b> Çoklu dil desteği, ses ve müzik ayarlarını değiştirebilme gibi seçenekler bulunmaktadır.
+
+<img width="951" alt="image" src="https://github.com/user-attachments/assets/2d78cc29-d5ce-4cff-afa3-1cd84a40dc1b" />
+
+
+<b>Hayvanlar: </b> Belirlenen alanda rastgele olarak yürüyen tavuklar ve horoz. Tavuklar belirli aralıklarla rastgele olarak yumurtlama özelliğine sahiptir. Tavukların yumurtalarına temas ettiğinde envantere gelmekte ve karakterimiz yumurtaları tüketebilmektedir.
+
+<img width="951" alt="image" src="https://github.com/user-attachments/assets/63ec50eb-63fb-40ff-a7f0-be2edb24bd15" />
+
+
+<b>Hasar Alma: </b> Karakterimiz dikenli otların arasında gezinirken hasar alır.
+
+<img width="982" alt="image" src="https://github.com/user-attachments/assets/2c374022-aac0-4cef-abbd-048bb0a279d6" />
+
+<b>Balık Tutma: </b> Su kenarında elinde olta varken karakterimiz klavyenin sağ ve sol tuşları ile balık tutabilir.
+<img width="982" alt="image" src="https://github.com/user-attachments/assets/9957056b-214e-4817-9c73-1c60a134655b" />
+
+<b>Ateş Yakma ve Balık Tutma: </b> Su kenarında elinde olta varken karakterimiz klavyenin sağ ve sol tuşları ile balık tutabilir.
+<img width="982" alt="image" src="https://github.com/user-attachments/assets/83484b64-4dbb-4cfe-9d45-076a49183bcc" />
+
+
 
 ![image](https://github.com/user-attachments/assets/a579428c-9faf-4818-834e-ddca11e84567)
 
