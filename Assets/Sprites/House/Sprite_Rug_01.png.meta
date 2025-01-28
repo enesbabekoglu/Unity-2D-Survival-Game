@@ -108,7 +108,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Sprite_Rug_01_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 22.5
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b2a7a43f27d7814bc18d94ad6f07a7
+      internalID: -62201605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rug_01_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 66
+        width: 22.5
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17108c1e15d11d2138c976b93df6c566
+      internalID: -2141299552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rug_01_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 66
+        width: 22.5
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e92e37c3cf9f9d57b59dbaf4cf5a1f7
+      internalID: 1373892724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rug_01_3
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 66
+        width: 22.5
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee80d594187ed98e887cb9ef06342d35
+      internalID: -1417730905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rug_01_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 44
+        width: 22.5
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b2962ffab7fc5f9914c45d311d4441
+      internalID: -1462726747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rug_01_5
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 44
+        width: 22.5
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5daacfa909a65123b461a69db3ff54a
+      internalID: -1352335465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rug_01_6
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 44
+        width: 22.5
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72a050e5f0eff8ac19b929755c84b0c0
+      internalID: -1853966924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rug_01_7
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 44
+        width: 22.5
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f292a7d99d3efc3ad9e6c0bc1b57a5
+      internalID: 473277708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rug_01_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 22
+        width: 22.5
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e45196dfd5be8b68e4210c6a44e173
+      internalID: 1959211378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rug_01_9
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 22
+        width: 22.5
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2fbb4ff3d5d561c874964435007918
+      internalID: -646064768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rug_01_10
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 22
+        width: 22.5
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ec09aabbac8d65b86b7885090bb216
+      internalID: -1361713893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rug_01_11
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 22
+        width: 22.5
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09904ed458f99fddf9f59a8ba27da348
+      internalID: 1542953564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rug_01_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 22.5
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b6eff9e9b94be8fc94ac4a0871ad985
+      internalID: -188861607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rug_01_13
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 0
+        width: 22.5
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 996214e4968054ce9b93243884ed1663
+      internalID: 30471689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rug_01_14
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 0
+        width: 22.5
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f3435170fb0195ba8768872dae632f1
+      internalID: 416407056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Rug_01_15
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 22.5
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16af484fa81a779c99b37ada60e75f9a
+      internalID: -1216608964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +455,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sprite_Rug_01_0: -62201605
+      Sprite_Rug_01_1: -2141299552
+      Sprite_Rug_01_10: -1361713893
+      Sprite_Rug_01_11: 1542953564
+      Sprite_Rug_01_12: -188861607
+      Sprite_Rug_01_13: 30471689
+      Sprite_Rug_01_14: 416407056
+      Sprite_Rug_01_15: -1216608964
+      Sprite_Rug_01_2: 1373892724
+      Sprite_Rug_01_3: -1417730905
+      Sprite_Rug_01_4: -1462726747
+      Sprite_Rug_01_5: -1352335465
+      Sprite_Rug_01_6: -1853966924
+      Sprite_Rug_01_7: 473277708
+      Sprite_Rug_01_8: 1959211378
+      Sprite_Rug_01_9: -646064768
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
