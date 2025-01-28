@@ -8,35 +8,53 @@ https://test.enesbabekoglu.com.tr
 ## Oynanış Videosu
 https://youtu.be/UOENMv4Hsss
 
-## Proje Üyeleri
+## Proje Üyeleri / Görev Dağılımları
 ### 1. Ahmet Talha Geçgelen (22360859024) - [@gecgelenus](https://github.com/gecgelenus)
- - Çalıda iken yavaşlama damageOnCollision.cs:44 --  :55
- - Çalıda iken hasar alma damageOnCollision.cs:36
- - Ateş alanına yakınlık tespiti FireInteraction.cs:33
- - Oyuncu çarpışma tespiti playerController.cs:32
- - Oyuncu hareket kontrolü (+animasyon) playerController.cs:42
- - Nesnenin oyuncuyu takibi followHolder.cs:56 -- :71
- - Ağaç ile etkileşime geçme kontrolü takeDamage.cs:47 -- :64
- - Ağaç ile etkileşim takeDamage.cs:87
- - Ağacın yeniden doğması takeDamage.cs:38
- - Kameranın oyuncuyu takibi playerControls.cs:76
- - Ateşin yanma süresi kontrolü FireControl.cs:42
- - Ağaçın sağlık kontrolü/limiti takeDamage.cs:89
+
+  ### VİZE
+  - Çalıda iken yavaşlama damageOnCollision.cs:44 --  :55
+  - Çalıda iken hasar alma damageOnCollision.cs:36
+  - Ateş alanına yakınlık tespiti FireInteraction.cs:33
+  - Oyuncu çarpışma tespiti playerController.cs:32
+  - Oyuncu hareket kontrolü (+animasyon) playerController.cs:42
+  - Nesnenin oyuncuyu takibi followHolder.cs:56 -- :71
+  - Ağaç ile etkileşime geçme kontrolü takeDamage.cs:47 -- :64
+  - Ağaç ile etkileşim takeDamage.cs:87
+  - Ağacın yeniden doğması takeDamage.cs:38
+  - Kameranın oyuncuyu takibi playerControls.cs:76
+  - Ateşin yanma süresi kontrolü FireControl.cs:42
+  - Ağaçın sağlık kontrolü/limiti takeDamage.cs:89
+  
+  ### FİNAL
+  - Duraklama Menüsü (10x)
+  - Asenkronizasyon (10x)
+  - Animasyonlar (20x)
+  - Ses ve Müzik (20x)
+ 
 
 ### 2. Enes Babekoğlu (20360859113) - [@enesbabekoglu](https://github.com/enesbabekoglu)
- - Balık pişirme BarbecueSystem.cs:37
- - Yiyecek yeme sistemi EatingSystem.cs:167
- - Balık tutma minioyunu FishingSystem.cs:55
- - Balık tutma sistemi/Su ile etkileşim FishingTriggerHandler.cs:33
- - Can ve açlık sistemi HungerHealthSystem.cs:60 -- :72 -- :85
- - Envanter sistemi InventorySystem.cs:48 -- :69 -- :92 -- :103
- - Oyun yönetim scripti GameManager.cs:50
- - Nesnelerin etkileşime geçilebilirlik kontrolü followHolder.cs:112 -- :44
- - Ateş alanına tıklayarak etkileşime geçme FireInteraction.cs:74
- - Oyuncu hızının açlığa bağlı olarak değişimi playerState.cs:51
- - Mini oyun kullanıcı girdisi FishingSystem.cs:95 -- :101
- - Balık tutma süresi kontrolü FishingSystem.cs:132
- - Can ve açlık kontrolü/limiti HungerHealthSystem.cs:66 -- :81
+
+ ### VİZE
+  - Balık pişirme BarbecueSystem.cs:37
+  - Yiyecek yeme sistemi EatingSystem.cs:167
+  - Balık tutma minioyunu FishingSystem.cs:55
+  - Balık tutma sistemi/Su ile etkileşim FishingTriggerHandler.cs:33
+  - Can ve açlık sistemi HungerHealthSystem.cs:60 -- :72 -- :85
+  - Envanter sistemi InventorySystem.cs:48 -- :69 -- :92 -- :103
+  - Oyun yönetim scripti GameManager.cs:50
+  - Nesnelerin etkileşime geçilebilirlik kontrolü followHolder.cs:112 -- :44
+  - Ateş alanına tıklayarak etkileşime geçme FireInteraction.cs:74
+  - Oyuncu hızının açlığa bağlı olarak değişimi playerState.cs:51
+  - Mini oyun kullanıcı girdisi FishingSystem.cs:95 -- :101
+  - Balık tutma süresi kontrolü FishingSystem.cs:132
+  - Can ve açlık kontrolü/limiti HungerHealthSystem.cs:66 -- :81
+
+  ### FİNAL
+  - Ana Menü (30x)
+  - Duraklama Menüsü (10x)
+  - Animasyonlar (10x)
+  - Ses ve Müzik (10x)
+
 
 ## Oyun İçi Görseller
 
